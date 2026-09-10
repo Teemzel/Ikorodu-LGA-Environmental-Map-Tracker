@@ -10,7 +10,7 @@ st.title("📍 Ikorodu LGA Environmental Predictive Hub & Map Tracker")
 # 1. Load Datasets
 @st.cache_data
 def load_dashboard_data():
-    master_path = r"D:\Oluwatoyin Atoloye\ArewaDS-Machine-Learning\Project.py\DataSet\ikorodu_dashboard_master.csv"
+    master_path = "ikorodu_dashboard_master.csv"
     if os.path.exists(master_path):
         df = pd.read_csv(master_path)
     # FAIL-SAFE: If the pipeline hasn't written the ML columns yet,
