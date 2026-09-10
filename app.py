@@ -26,9 +26,9 @@ def load_dashboard_data():
 @st.cache_data
 def load_map_coordinates():
     # Load your third dataset to extract coordinates
-    geo_path = "NGA_State_Boundaries_V2_-1435940875497776069.csv"
-    if os.path.exists(geo_path):
-        geo_df = pd.read_csv(geo_path)
+   # geo_path = "NGA_State_Boundaries_V2_-1435940875497776069.csv"
+   # if os.path.exists(geo_path):
+       # geo_df = pd.read_csv(geo_path)
         # Filter rows mentioning Ikorodu or isolate coordinates near Lagos
         # Creating a standard boundary point layout for Ikorodu key sectors
         map_points = pd.DataFrame({
@@ -38,7 +38,7 @@ def load_map_coordinates():
             'Risk_Level': ['High Risk', 'Critical Overflow', 'Moderate', 'Low Vulnerability']
         })
         return map_points
-    return pd.DataFrame()
+   # return pd.DataFrame()
 
 df = load_dashboard_data()
 map_data = load_map_coordinates()
