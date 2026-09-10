@@ -26,7 +26,7 @@ def load_dashboard_data():
 @st.cache_data
 def load_map_coordinates():
     # Load your third dataset to extract coordinates
-    geo_path = r"D:\Oluwatoyin Atoloye\ArewaDS-Machine-Learning\Project.py\DataSet\NGA_State_Boundaries_V2_-1435940875497776069.csv"
+    geo_path = "NGA_State_Boundaries_V2_-1435940875497776069.csv"
     if os.path.exists(geo_path):
         geo_df = pd.read_csv(geo_path)
         # Filter rows mentioning Ikorodu or isolate coordinates near Lagos
